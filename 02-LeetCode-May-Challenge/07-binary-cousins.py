@@ -7,7 +7,7 @@
 
 
 class Solution:
-    def isCousins(self, root: TreeNode, x: int, y: int) -> bool:
+    def isCousins(self, root, x: int, y: int) -> bool:
         self.pX = 0
         self.pY = 0
         self.dX = -1
@@ -16,7 +16,7 @@ class Solution:
         self.parent_and_depth(root, x, y, 0)
         return ((self.dX == self.dY) and (self.pX != self.pY))
     
-    def parent_and_depth(self, root: TreeNode, x: int, y: int, d: int) -> bool:
+    def parent_and_depth(self, root, x: int, y: int, d: int) -> bool:
         if root == None:
             return
         if root.left != None:
@@ -45,7 +45,7 @@ class Solution:
 ######### Faster Solution ##########
 ####################################
 class Solution_opt:
-    def isCousins_opt(self, root: TreeNode, x: int, y: int) -> bool:
+    def isCousins_opt(self, root, x: int, y: int) -> bool:
         
         
         def depth(root,x,par,level):
