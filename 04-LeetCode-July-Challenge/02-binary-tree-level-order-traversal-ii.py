@@ -15,6 +15,7 @@ class Solution:
         while len(queue) > 0:
             nodes = []
             for i in range(0, len(queue)):
+                print(i)
                 node = queue.pop(0)
                 nodes.append(node.val)
                 if node.left != None:
