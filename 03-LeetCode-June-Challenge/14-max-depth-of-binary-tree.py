@@ -6,8 +6,11 @@
 #         self.right = right
 class Solution:
     def maxDepth(self, root, depth = 0):
+        # base case
         if root is None:
             return depth
+
+        # recursive case
         else:
             depth = depth + 1
             left_depth = self.maxDepth(root.left, depth = depth)
